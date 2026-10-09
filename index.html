@@ -3,54 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Myself</title>
+    <meta name="description" content="Luka Abesadze - front-end development student from Georgia.">
+    <title>Luka Abesadze | Front-End Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-500">
-    <header class="p-4 m-4 bg-black flex justify-between items-center border-4 border-white rounded-md">
-    <h1 class="font-bold text-3xl text-white">About Myself</h1>
-    <nav class="p-4 font-semibold text-xl">
-        <button class="bg-white border-2 border-gray-500 p-2 m-2 text-black rounded-md transition-all duration-500 ease-in-out hover:bg-gray-500 hover:border-white">
-            <a href="#home">Home</a></button>
-        <button class="bg-white border-2 border-gray-500 p-2 m-2 text-black rounded-md transition-all duration-500 ease-in-out hover:bg-gray-500 hover:border-white">
-            <a href="#about">About</a></button>
-        <button class="bg-white border-2 border-gray-500 p-2 m-2 text-black rounded-md transition-all duration-500 ease-in-out hover:bg-gray-500 hover:border-white">
-            <a href="#contact">Contact</a></button>
-        <button class="bg-white border-2 border-gray-500 p-2 m-2 text-black rounded-md transition-all duration-500 ease-in-out hover:bg-gray-500 hover:border-white">
-            <a href="#skills">Skills</a></button>
-        <button class="bg-white border-2 border-gray-500 p-2 m-2 text-black rounded-md transition-all duration-500 ease-in-out hover:bg-gray-500 hover:border-white">
-            <a href="#expirience">Expirience</a></button>
-    </nav>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+        <div class="container flex items-center justify-between py-3 relative">
+            <a href="#home" class="brand">Luka Abesadze</a>
+
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+
+            <nav aria-label="Main">
+                <ul class="nav-links" id="navLinks">
+                    <li><a class="nav-link" href="#home">Home</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="#skills">Skills</a></li>
+                    <li><a class="nav-link" href="#projects">Projects</a></li>
+                    <li><a class="nav-link" href="#experience">Experience</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <h2 class="bg-black p-2 m-2 border-2 border-white text-center text-2xl font-bold text-white">Information About Myself</h2>
-    <section class="bg-black m-4 p-4 border-2 border-white rounded-md grid grid-cols-3 gap-4 items-center">
+    <main>
 
-        <div class="bg-white border-2 border-gray-500 rounded-md flex flex-col m-4 p-4 items-center">
-            <strong class="font-semibold text-2xl border-2 border-black p-2">General Information</strong>
-            <br>
-              <p class="font-semibold text-black border-2 border-black p-2">Hi,my full name is Luka Abesadze,im from Georgia and im student who is studying front-end-development.My future goal is to be succesful front-end-developer.
-                In 1 year i will finish school and move in to university.
-              </p>
-        </div>
+        <!-- ===== Hero ===== -->
+        <section id="home" class="container hero">
+            <p class="hero-greeting">Hi, I'm</p>
+            <h1 class="hero-name">Luka Abesadze</h1>
+            <p class="hero-role">
+                A student from Georgia studying front-end development, building websites with HTML, CSS, JavaScript and Tailwind.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View my websites</a>
+                <a href="#contact" class="btn btn-ghost">Get in touch</a>
+            </div>
+        </section>
 
-         <div class="bg-white border-2 border-gray-500 rounded-md flex flex-col m-4 p-4 items-center">
-            <strong class="font-semibold text-2xl border-2 border-black p-2">My Projects</strong>
-            <br>
-            <ol class="font-semibold border-2 border-black p-2 m-2">
-                <li><a href="#website1">1. Movies and Series Website</a></li>
-                <li><a href="#website2">2. The Sopranos Website</a></li>
-                <li><a href="#website3">3. Real Madrid Website</a></li>
+        <!-- ===== About ===== -->
+        <section id="about" class="container section">
+            <h2 class="section-title">About me</h2>
+            <p class="section-lead">A little about who I am and where I'm heading.</p>
+
+            <div class="grid gap-6 md:grid-cols-2">
+                <article class="card">
+                    <h3>General information</h3>
+                    <p>
+                        My full name is Luka Abesadze. I'm from Georgia and I'm a student studying front-end development.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>My goal</h3>
+                    <p>
+                        I want to become a successful front-end developer. In one year I will finish school and move on to university.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== Skills ===== -->
+        <section id="skills" class="container section">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-lead">The tools I use to build websites.</p>
+
+            <ul class="chips">
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+                <li class="chip">JavaScript</li>
+                <li class="chip">SCSS</li>
+                <li class="chip">Tailwind CSS</li>
+            </ul>
+        </section>
+
+        <!-- ===== Projects ===== -->
+        <section id="projects" class="container section">
+            <h2 class="section-title">My websites</h2>
+            <p class="section-lead">Three websites I've built while learning front-end development.</p>
+
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+                <article id="firstwebsite" class="card project">
+                    <div class="project-media">
+                        <!-- Replace OIP.webp with a screenshot of this project -->
+                        <img src="OIP.webp" alt="Screenshot of the Movies and Series website" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3>Movies and Series Website</h3>
+                        <p>My first website. A site about popular movies and series.</p>
+                        <ul class="tags">
+                            <li class="tag">HTML</li>
+                            <li class="tag">CSS</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article id="secondwebsite" class="card project">
+                    <div class="project-media">
+                        <!-- Replace OIP.webp with a screenshot of this project -->
+                        <img src="OIP.webp" alt="Screenshot of The Sopranos website" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3>The Sopranos Website</h3>
+                        <p>My second website. A site about the popular series The Sopranos.</p>
+                        <ul class="tags">
+                            <li class="tag">HTML</li>
+                            <li class="tag">CSS</li>
+                            <li class="tag">JavaScript</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article id="website3" class="card project">
+                    <div class="project-media">
+                        <!-- Replace OIP.webp with a screenshot of this project -->
+                        <img src="OIP.webp" alt="Screenshot of the Real Madrid website" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3>Real Madrid Website</h3>
+                        <p>My third website. A site about the football club Real Madrid.</p>
+                        <ul class="tags">
+                            <li class="tag">HTML</li>
+                            <li class="tag">SCSS</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ===== Experience ===== -->
+        <section id="experience" class="container section">
+            <h2 class="section-title">Experience</h2>
+            <p class="section-lead">Where I am now and what comes next.</p>
+
+            <ol class="timeline">
+                <li class="timeline-item">
+                    <h3>Studying front-end development</h3>
+                    <p>One year of learning so far. I know enough to build the front end of a website with HTML, JavaScript, SCSS, CSS and Tailwind.</p>
+                </li>
+                <li class="timeline-item">
+                    <h3>Finishing school</h3>
+                    <p>One year left before I graduate.</p>
+                </li>
+                <li class="timeline-item">
+                    <h3>Starting university</h3>
+                    <p>The next step toward becoming a front-end developer.</p>
+                </li>
             </ol>
-        </div>
+        </section>
 
-         <div class="bg-white border-2 border-gray-500 rounded-md flex flex-col m-4 p-4 items-center">
-            <strong class="font-semibold text-2xl border-2 border-black p-2">General Information</strong>
-            <br>
-              <p class="font-semibold text-black border-2 border-black p-2">Hi,my full name is Luka Abesadze,im from Georgia and im student who is studying front-end-development.My future goal is to be succesful front-end-developer.
-                In 1 year i will finish school and move in to university.
-              </p>
+        <!-- ===== Contact ===== -->
+        <section id="contact" class="container section">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-lead">Want to work together or just say hi? Reach out.</p>
+
+            <div class="grid gap-6 md:grid-cols-2">
+                <!-- TODO: replace with your real email -->
+                <a class="card contact-link" href="mailto:your-email@example.com">
+                    <span>Email</span>
+                    your-email@example.com
+                </a>
+                <!-- TODO: replace with your real GitHub profile -->
+                <a class="card contact-link" href="https://github.com/your-username" target="_blank" rel="noopener">
+                    <span>GitHub</span>
+                    github.com/your-username
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            &copy; 2026 Luka Abesadze
         </div>
-    </section>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById("navToggle");
+        const links = document.getElementById("navLinks");
+
+        toggle.addEventListener("click", () => {
+            const open = links.classList.toggle("is-open");
+            toggle.setAttribute("aria-expanded", open);
+        });
+
+        links.addEventListener("click", (e) => {
+            if (e.target.matches(".nav-link")) {
+                links.classList.remove("is-open");
+                toggle.setAttribute("aria-expanded", "false");
+            }
+        });
+
+        // Highlight the nav link for the section currently in view
+        const navLinks = document.querySelectorAll(".nav-link");
+        const sections = document.querySelectorAll("main section[id]");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach((link) => {
+                        link.classList.toggle("is-active", link.getAttribute("href") === "#" + entry.target.id);
+                    });
+                }
+            });
+        }, { rootMargin: "-45% 0px -50% 0px" });
+
+        sections.forEach((section) => observer.observe(section));
+    </script>
 </body>
 </html>
